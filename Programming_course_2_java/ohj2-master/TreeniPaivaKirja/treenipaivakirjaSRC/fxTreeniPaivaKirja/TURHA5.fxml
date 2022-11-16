@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import fi.jyu.mit.fxgui.ListChooser?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" 
+			fx:controller">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Tiedosto">
+          </Menu>
+          <Menu mnemonicParsing="false" text="Muokkaa">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Treenit" />
+                  <MenuItem mnemonicParsing="false" onAction="#poistaTietoja" text="Poista" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Apua">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#AvaaInfoSivu" text="Info" />
+                  <MenuItem mnemonicParsing="false" onAction="#AvaaNavigointiApu" text="Navigointiapu" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <VBox>
+               <children>
+                  <Label text="Treeniohjelmat">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ListChooser editable="true" rivit="VOIMA&#10;KESTÄVYYS&#10;LIHASKUNTO&#10;LIHASKASVU&#10;TABATA&#10;JOKUOHJELMA" />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label text="Päivämäärä">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ListChooser editable="true" rivit="1.2.2021&#10;2.2.2021&#10;3.2.2021&#10;4.2.2021&#10;5.2.2021" />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label text="Treeni">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ListChooser editable="true" rivit="RINTA&#10;SELKÄ&#10;KOKOVARTALO" />
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label text="Vertailu edelliseen">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <ListChooser editable="true" rivit="PENKKI +300 kg &#10;KYYKKY -200 kg &#10;HAUISKÄÄNTÖ +15 kg&#10;" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
